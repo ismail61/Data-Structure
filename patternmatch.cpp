@@ -1,12 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std ;
-void match(char *str , char *pat ) {
+void patternmatch(char *str , char *pat ) {
     int ls = strlen(str) ;
     int lp = strlen(pat) ;
     int i , j , c = 0 ;
     for( i = 0 ; i < ls - lp ; i ++ ) {
         for( j = 0 ; j < lp ; j ++ ) {
-            if( str[i+j] != pat[j]) break ;
+            if( str[i+j] != pat[j])
+                break ;
         }
         if( j == lp ) {
                 cout<<"Pattern found at "<<i+1<<" location"<<endl;
@@ -19,7 +20,7 @@ int main() {
 
     char *str = "what not to do" ;
     char *pat = "no" ;
-    match(str , pat) ;
+    patternmatch(str , pat) ;
 return 0 ;
 }
 
