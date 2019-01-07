@@ -35,7 +35,6 @@ void postOrderTraverse(Node *root)
     {
         return;
     }
-    //cout<<":::::::::::::"<<endl;
     postOrderTraverse(root->left);
     postOrderTraverse(root->right);
     cout<<root->data<<endl;
